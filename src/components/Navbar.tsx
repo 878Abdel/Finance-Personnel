@@ -20,17 +20,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {['Fonctionnalités', 'Tarifs', 'À propos'].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-gray-500 hover:text-[#0D0D1A] transition-colors duration-200"
-            >
-              {item}
-            </a>
-          ))}
-        </div>
+        <div className="hidden md:flex items-center gap-8"></div>
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
@@ -62,11 +52,6 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden mt-2 mx-4 p-4 bg-white rounded-2xl shadow-xl border border-gray-100">
-          {['Fonctionnalités', 'Tarifs', 'À propos'].map((item) => (
-            <a key={item} href="#" className="block py-2 text-sm font-medium text-gray-600 hover:text-[#8116E0]">
-              {item}
-            </a>
-          ))}
           <div className="mt-3 pt-3 border-t border-gray-100 flex flex-col gap-2">
             <button onClick={() => navigate('/login')} className="text-sm font-semibold text-[#0D0D1A] py-2">Connexion</button>
             <button onClick={() => navigate('/register')} className="text-sm font-semibold bg-[#0D0D1A] text-white py-2.5 rounded-xl">Commencer →</button>
